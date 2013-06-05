@@ -1,0 +1,77 @@
+%% Creator: Inkscape inkscape 0.48.3.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'thm_diff_quad.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{472.0737793bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.39656606)%
+    \put(0,0){\includegraphics[width=\unitlength]{thm_diff_quad.pdf}}%
+    \put(0.18939988,0.236781){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$P_0$}}}%
+    \put(0.36078867,0.21087588){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$A$}}}%
+    \put(0.40444443,0.04935617){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x$}}}%
+    \put(0.03184736,0.3666116){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$y$}}}%
+    \put(0.12958593,0.05466944){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny $
+x_0-\delta_1$}}}%
+    \put(0.21370918,0.05533131){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny $
+x_0+\delta_1$}}}%
+    \put(0.1807888,0.07972635){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny $x_0$}}}%
+    \put(0.23965303,0.21106175){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$Q$}}}%
+    \put(0.00127264,0.18606142){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny $
+y_0-\delta_1$}}}%
+    \put(0.00127267,0.25384743){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny $
+y_0+\delta_1$}}}%
+    \put(0.02886744,0.21874395){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\tiny $y_0$}}}%
+    \put(0.58042747,0.14195883){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$P_0$}}}%
+    \put(0.62933019,0.18108173){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$P=(x,\,y)$}}}%
+    \put(0.64312054,0.28658587){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\scriptsize congelo $y$ e considero
+la direzione rispetto a $x$}}}%
+    \put(0.67661739,0.13978083){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\scriptsize a partire da $P_0$, 
+raggiungo $P$ sulla spezzata}}}%
+    \put(0.49713909,0.31451926){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$(c_x,\,y)$}}}%
+    \put(0.50828474,0.20349261){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$y$}}}%
+  \end{picture}%
+\endgroup%

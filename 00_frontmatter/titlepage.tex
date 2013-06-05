@@ -1,0 +1,39 @@
+\renewcommand{\maketitle}{
+\begin{titlepage}
+  \let\footnotesize\small
+  \let\footnoterule\relax
+  \let \footnote \thanks
+  \null\vfil
+  \vskip 6.0em
+  \begin{center}%
+    \rule{\linewidth}{0.5mm}
+    	\vskip 0.5cm
+    {\LARGE \title \par}%
+    \vskip 0.5cm
+    \rule{\linewidth}{0.5mm}
+    \vskip 3em%
+    {\large
+     \lineskip 0.75em%
+      \begin{tabular}[t]{c}%
+        \subtitle
+      \end{tabular}\par}%
+      \vskip 1.5em%
+    \vfill
+    {\large \author \par}%
+    {\large \date \par}%       % Set date in \large size.
+  \end{center}\par
+%  @thanks
+  \vfil\null
+    \setcounter{footnote}{0}%
+  \global\let\thanks\relax
+  \global\let\maketitle\relax
+  \global\let\thanks\empty
+  \global\let\author\empty
+  \global\let\date\empty
+  \global\let\title\empty
+  \global\let\title\relax
+  \global\let\author\relax
+  \global\let\date\relax
+  \global\let\and\relax
+\end{titlepage}
+}

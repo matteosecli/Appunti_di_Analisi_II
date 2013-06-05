@@ -1,0 +1,76 @@
+%% Creator: Inkscape inkscape 0.48.3.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'rettangolo_dini_generale.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{257.82817383bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.73008285)%
+    \put(0,0){\includegraphics[width=\unitlength]{rettangolo_dini_generale.pdf}}%
+    \put(0.52089182,0.43752236){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$P_0$}}}%
+    \put(0.74116971,0.39009106){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$A$}}}%
+    \put(0.82110179,0.09435449){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbb
+{R}^m$}}}%
+    \put(0.13889042,0.67523736){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbb{R}^k$}}}%
+    \put(0.48008047,0.05532391){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{B}_m
+(x_0,\,\delta)$}}}%
+    \put(0.50512526,0.14996115){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$x_0$}}}%
+    \put(0.63949928,0.31729302){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$R$}}}%
+    \put(-0.00309072,0.40449719){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathrm{B}_m
+(y_0,\,\sigma)$}}}%
+    \put(0.72937005,0.52552525){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\lbrace
+g = 0
+\rbrace = 
+\mathsf{V}$}}}%
+    \put(0.74250855,0.67464128){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$\mathbb
+{R}^n = 
+\mathbb
+{R}^m
+\times
+\mathbb
+{R}^k$}}}%
+  \end{picture}%
+\endgroup%

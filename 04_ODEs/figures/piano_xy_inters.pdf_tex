@@ -1,0 +1,70 @@
+%% Creator: Inkscape 0.48.3.1, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'piano_xy_inters.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{711.06397277bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.42170863)%
+    \put(0,0){\includegraphics[width=\unitlength]{piano_xy_inters.pdf}}%
+    \put(0.4099781,0.20567687){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $t$\end{minipage}}}%
+    \put(0.19862204,0.40591204){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x$\end{minipage}}}%
+    \put(0.20452705,0.20655923){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $0$\end{minipage}}}%
+    \put(0.37683618,0.27094211){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x_3 = \pi$\end{minipage}}}%
+    \put(0.3778771,0.16066857){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x_1 = -\pi$\end{minipage}}}%
+    \put(0.43034992,0.22871072){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x_2$\end{minipage}}}%
+    \put(0.26804731,0.19477417){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x_{12}$\end{minipage}}}%
+    \put(0.27741706,0.24716924){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x_{23}$\end{minipage}}}%
+    \put(0.97413902,0.20593624){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x$\end{minipage}}}%
+    \put(0.76278295,0.40617141){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $y$\end{minipage}}}%
+    \put(0.72212131,0.20547277){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x_1$\end{minipage}}}%
+    \put(0.77002832,0.19646178){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x_2$\end{minipage}}}%
+    \put(0.82515698,0.2043373){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x_3$\end{minipage}}}%
+    \put(0.73965131,0.24877775){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x_{12}$\end{minipage}}}%
+    \put(0.79703011,0.24596506){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950082\unitlength}\raggedright $x_{23}$\end{minipage}}}%
+    \put(0.09250223,0.34439272){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1237582\unitlength}\raggedright \large \textbf{\underline{\underline{NO!}}}\end{minipage}}}%
+  \end{picture}%
+\endgroup%

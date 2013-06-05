@@ -1,0 +1,459 @@
+\graphicspath{{03_teorema_delle_funzioni_implicite/figures/PNG/}{03_teorema_delle_funzioni_implicite/figures/PDF/}{03_teorema_delle_funzioni_implicite/figures/}}
+
+
+\chapter{Teorema delle funzioni implicite ed applicazioni}
+\copyrightnotice
+\section{Caso $n=2$}
+Consideriamo $\mathsf{V} = \lbrace (x,\,y) \in \mathbb{R}^2 : g(x,\,y) = 0 \rbrace$, dove $g \in C^1(\mathbb{R}^2)$. Osserviamo che, cercando il luogo di zeri di una funzione di $2$ variabili (due gradi di libertà), abbiamo un vincolo che abbassa gradi di libertà , e quindi ci aspettiamo una \emph{curva}, che ha solo $1$ grado di libertà.
+\begin{center}
+\def\svgwidth{6cm}
+\input{./03_teorema_delle_funzioni_implicite/figures/dini_2d.pdf_tex}
+\end{center}
+
+\noindent \underline{Problema:} Localmente, $\mathsf{V}$ è un grafico del piano cartesiano? In generale, non vi è una risposta positiva. Per esempio, $g \equiv 0 \text{ su } \mathbb{R}^2$ rappresenta tutto il piano $\forall \, (x,\,y) \in \mathbb{R}^2$.
+
+\`E quindi fondamentale il seguente risultato da parte di Dini, già accennato in precedenza, che enunciamo nuovamente.
+
+\begin{thm}[delle funzioni implicite, \textsc{U. Dini}]
+Siano $g \in C^1(A)$, $A \subseteq \mathbb{R}^2$ aperto, $P_0 = (x_0,\,y_0) \in A$ e supponiamo che
+\begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\roman*)},start=1]
+\item $g(P_0) = 0$
+\item $\displaystyle \frac{\partial g}{\partial y}(P_0) \neq 0$
+\end{enumerate}
+Allora
+\begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(D\arabic*)},start=1]
+\item esistono $\delta > 0,\; \sigma > 0$ tali che il rettangolo $R = [x_0 - \delta,\, x_0 + \delta] \times [y_0 - \sigma,\, y_0 + \sigma] \subseteq A$ e $\forall \, x \in (x_0 - \delta,\, x_0 + \delta)$ fissato, $\exists ! \, y \doteqdot h(x) \in [y_0 - \sigma,\,y_0 + \sigma]$ tale che $g(x,\,y) = 0$.
+
+In altre parole, $\exists !$ una funzione $h : (x_0 - \delta,\, x_0 + \delta) \longrightarrow (y_0 - \sigma,\, y_0 + \sigma)$ tale che $g(x,\,h(x)) = 0$.
+
+\item $h$ è di classe $C^1$ su $(x_0 - \delta,\, x_0 + \delta)$ e
+\begin{center}
+$\mathrm{(\star)}$
+\hfill
+$\displaystyle
+h'(x) = - \frac{\displaystyle \frac{\partial g}{\partial x} \left( x,\,h(x) \right)}{\displaystyle \frac{\partial g}{\partial y} \left( x,\,h(x) \right)}
+\qquad \forall x \in (x_0 - \delta,\, x_0 + \delta)
+$
+\hfill \null \\
+\end{center}
+\end{enumerate}
+\end{thm}
+\begin{proof}\footnote{Si veda anche \cite{Conti1993}}
+Supponiamo, per esempio, che $\frac{\partial g}{\partial y} (P_0) > 0$. Dal fatto che $g \in C^1(A)$, le derivate prime sono continue, quindi vale la permanenza del segno \footnote{
+\textbf{Teorema }\textnormal{(della permanenza del segno)}\textbf{.}\textit{
+Siano $A \subset \mathbb{R}^n$ e $f : A \longrightarrow \mathbb{R}$ continua in un punto $P_0 \in A$ con $f(P_0) = 0$. Allora $\exists \, r_0 > 0$ tale che
+$$
+f(P) > 0 \qquad \forall P \in \mathrm{B}(P_0,\,r_0) \cap A
+$$
+}}.
+\begin{center}
+\def\svgwidth{10cm}
+\input{./03_teorema_delle_funzioni_implicite/figures/rettangolo_dini.pdf_tex}
+\end{center}
+In altre parole, esistono $\delta,\,\sigma > 0$ tali che
+\begin{center}
+$\mathrm{(1)}$
+\hfill
+$\displaystyle
+R = [x_0 - \delta,\, x_0 + \delta] \times [y_0 - \sigma,\, y_0 + \sigma] \subset A
+$
+\hfill \null \\
+\end{center}
+(l'inclusione non vale perché $A$ è aperto!) e
+\begin{center}
+$\mathrm{(2)}$
+\hfill
+$\displaystyle
+\frac{\partial g}{\partial y}(x,\,y) > 0 \qquad \forall \, x,\,y \in \mathbb{R}
+$
+\hfill \null \\
+\end{center}
+Consideriamo ora la funzione (di una variabile reale) ottenuta ``congelando'' $x_0$ e muovendoci rispetto a $y$, ossia la funzione
+$$
+[y_0-\sigma,\,y_0+\sigma] \ni y \longmapsto g(x_0,\,y) \in \mathbb{R}
+$$
+Per la $\mathrm{(2)}$, tale funzione è strettamente crescente. D'altra parte, per la (i), deve accadere che
+$$
+g(x_0,\,y_0-\sigma) < 0 \qquad \text{e} \qquad g(x_0,\,y_0+\sigma) > 0
+$$
+Applicando ancora il teorema della permanenza del segno otteniamo che, pur di diminuire $\delta$, non è restrittivo supporre che
+\begin{center}
+$\mathrm{(3)}$
+\hfill
+$\displaystyle
+g(x,\,y_0-\sigma) < 0 \qquad \text{e} \qquad g(x,\,y_0+\sigma) > 0
+\qquad \forall x \in (x_0-\delta,\, x_0+\delta)
+$
+\hfill \null \\
+\end{center}
+Da $\mathrm{(3)}+\mathrm{(3)}$ segue che, essendo
+$$
+[y_0-\sigma,\,y_0+\sigma] \ni y \longmapsto g(x_0,\,y) \in \mathbb{R}
+$$
+strettamente crescente $\forall \, x \in (x_0-\delta,\, x_0+\delta)$ fissato, possiamo concludere che, per il teorema dei valori intermedi, vale (D1).
+
+Proviamo (D2).
+
+Consideriamo due punti $P' = (x',\,h(x')) \text{ e } P = (x,\,h(x)) \text{ con } x,\,x' \in (x_0-\delta,\, x_0+\delta)$. In particolare, $P,\,P' \in \overset{\null_\circ}{\mathbb{R}}$. Poiché $\overset{\null_\circ}{\mathbb{R}}$ è un aperto convesso, possiamo scrivere (per definizione di $h$)
+\begin{center}
+$\mathrm{(4)}$
+\hfill
+$\displaystyle
+0 = g(P') - g(P) = \nabla g(\overline{P}) \bullet (P' - P)
+$
+\hfill \null \\
+\end{center}
+per un opportuno $\overline{P} \in \overline{P'P}$, la cui esistenza è assicurata dal teorema del valor medio di Lagrange. Dalla $\mathrm{(4)}$ segue che
+$$
+0 = \frac{\partial g}{\partial x}(\overline{P})(x-x') + \frac{\partial g}{\partial y}(\overline{P})(h(x)-h(x')) \qquad \forall x,\,x' \in (x_0-\delta,\, x_0+\delta)
+$$
+ossia
+\begin{center}
+$\mathrm{(5)}$
+\hfill
+$\displaystyle
+\frac{h(x)-h(x')}{x-x'} = - \frac{\displaystyle \frac{\partial g}{\partial x}(\overline{P})}{\displaystyle \frac{\partial g}{\partial y}(\overline{P})}
+$
+\hfill \null \\
+\end{center}
+Da $\mathrm{(2)}+\mathrm{(5)}$, segue che
+$$
+\left\lvert \frac{h(x)-h(x')}{x-x'} \right\rvert \leq \left\lvert \frac{\displaystyle \underset{R}{\max} \left\lbrace \frac{\partial g}{\partial x} \right\rbrace}{\displaystyle \underset{R}{\min} \left\lbrace \frac{\partial g}{\partial y} \right\rbrace} \right\rvert = L \in (0,\,+\infty)
+$$
+In altre parole, abbiamo provato che $h$ è lipschitziana su $(x_0-\delta,\, x_0+\delta)$, e poiché una funzione lipschitziana è sempre continua, siamo autorizzati a far tendere $x' \rightarrow x$ nella $\mathrm{(5)}$ per ottenere $\mathrm{(\star)}$.
+\end{proof}
+
+\begin{obs}[i]
+Nel caso in cui $\frac{\partial g}{\partial x}(P_0) \neq 0$, con $P_0 = (x_0,\,y_0), \; g(P_0) = 0$, allora esistono $\delta,\,\sigma > 0$ tali che
+$$
+R = [x_0 - \delta,\, x_0 + \delta] \times [y_0 - \sigma,\, y_0 + \sigma] \subset A \qquad \forall \, y \in (y_0-\sigma,\,y_0+\sigma)
+$$
+e quindi $\exists ! \, x \doteqdot h(y) \in (x_0-\delta,\,x_0+\delta)$ tale che $g(h(y),\,y) = 0$. Inoltre $h : (y_0 - \sigma,\, y_0 + \sigma) \longrightarrow \mathbb{R}$ è di classe $C^1$ e
+\begin{center}
+$\mathrm{(\star)}$
+\hfill
+$\displaystyle
+h'(y) = - \frac{\displaystyle \frac{\partial g}{\partial y} \left( h(y),\,y \right)}{\displaystyle \frac{\partial g}{\partial x} \left( h(y),\,y \right)}
+\qquad \forall y \in (y_0 - \sigma,\, y_0 + \sigma)
+$
+\hfill \null \\
+\end{center}
+Quindi, se $\nabla g(P_0) \neq (0,\,0)$ possiamo affermare che il vincolo $\mathsf{V} = \lbrace (x,\,y) \in A : g(x,\,y) = 0 \rbrace$ è localmente il grafico di una funzione $y = h(x)$ oppure $x=h(y)$.
+\end{obs}
+
+\begin{exer}
+Provare che l'equazione della retta tangente a $\mathsf{V}$ nel punto $P_0$ è data da
+\begin{center}
+$\mathrm{(RT)}$
+\hfill
+$\displaystyle
+\nabla g(P_0) \bullet (P-P_0) = 0
+$
+\hfill \null \\
+\end{center}
+\end{exer}
+\begin{proof}
+Supponiamo, ad esempio, che $\frac{\partial g}{\partial y}(P_0) \neq 0$. Grazie al teorema di Dini, sappiamo che, localmente, $\mathsf{V}$ è il grafico di una certa funzione $y = h(x)$. Quindi, la retta tangente a $\mathsf{V}$ altro non è che la retta tangente al grafico di $h$. L'equazione della retta tangente in $P_0$ è
+$$
+y = h'(x_0)(x-x_0) + y_0 \Longleftrightarrow -h'(x_0)(x-x_0) + (y-y_0) = 0
+$$
+che si può riscrivere in forma vettoriale come
+$$
+(-h'(x_0),\,1) \bullet (P-P_0) = 0
+$$
+Usando $\mathrm{(\star)}$, l'equazione diventa
+$$
+\left( \frac{\displaystyle \frac{\partial g}{\partial x} \left( P_0 \right)}{\displaystyle \frac{\partial g}{\partial y} \left( P_0 \right)},\,1 \right) \bullet (P-P_0) = 0
+\Longleftrightarrow
+\left(\frac{\partial g}{\partial x} \left( P_0 \right),\,\frac{\partial g}{\partial y} \left( P_0 \right) \right) \bullet (P-P_0) = 0
+$$
+ossia
+$$
+\nabla g(P_0) \bullet (P-P_0) = 0
+$$
+Notiamo che, se avessimo supposto $\frac{\partial g}{\partial x}(P_0) \neq 0$, l'equazione sarebbe diventata
+$$
+(1,\,h'(y_0)) \bullet (P-P_0) = 0
+$$
+ma avremmo ottenuto lo stesso risultato.
+\end{proof}
+
+\begin{example}
+$\mathsf{V} = \lbrace (x,\,y) \in \mathbb{R}^2 : x^2 + y^2 = 1 \rbrace$
+\begin{center}
+\def\svgwidth{6cm}
+\input{./03_teorema_delle_funzioni_implicite/figures/esempio_circonferenza.pdf_tex}
+\end{center}
+Prendendo $g(x,\,y) = x^2 + y^2 - 1$ e $P_0 = (x_0,\,y_0)$, abbiamo che $\nabla g(P_0) = 2(x_0,\,y_0) \neq (0,\,0) \; \forall P_0 \in \mathsf{V}$. Quindi, l'equazione della retta tangente è data da
+$$
+\nabla g(P_0) \bullet (x-x_0,\,y-y_0) = 0 \Longleftrightarrow x_0(x-x_0) + y_0(y-y_0) = 0 
+$$
+\end{example}
+
+\begin{obs}[ii]
+Se $g(P_0) = 0$ e $\nabla g(P_0) = (0,\,0)$ allora non si può concludere nulla.
+\end{obs}
+
+\begin{example}
+$g(x,\,y) = x^2 + y^2 \Longrightarrow \mathsf{V} = \lbrace (x,\,y) \in \mathbb{R}^2 : g = 0 \rbrace = \lbrace (0,\,0) \rbrace$, che ovviamente non è il grafico di una funzione in un intorno.
+\end{example}
+
+
+
+\section{Caso $n=3$}
+Consideriamo $\mathsf{V} = \lbrace (x,\,y,\,z) \in \mathbb{R}^3 : g(x,\,y,\,z) = 0 \rbrace$, dove $g \in C^1(\mathbb{R}^3)$. Localmente, $\mathsf{V}$ è tipicamente una ``superficie'' di $\mathbb{R}^3$.
+\begin{center}
+\def\svgwidth{7cm}
+\input{./03_teorema_delle_funzioni_implicite/figures/dini_3d.pdf_tex}
+\end{center}
+
+Si può provare il seguente teorema delle funzioni implicite.
+
+\begin{thm}
+Siano $g \in C^1(A)$, $A \subseteq \mathbb{R}^3$ aperto, $P_0 = (x_0,\,y_0,\,z_0) \in A$ e supponiamo che
+\begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\roman*)},start=1]
+\item $g(P_0) = 0$
+\item $\displaystyle \frac{\partial g}{\partial z}(P_0) \neq 0$
+\end{enumerate}
+Allora
+\begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(D\arabic*)},start=1]
+\item esistono $\delta > 0,\; \sigma > 0$ tali che il ``rettangolo`` (o meglio, il cilindro) $\mathrm{B}_2((x_0,\,y_0),\,\delta) \times [z_0 - \sigma,\, z_0 + \sigma] \subseteq A$ e $\forall \, (x,\,y) \in \mathrm{B}_2((x_0,\,y_0),\,\delta)$ fissata, $\exists ! \, z \doteqdot h(x,\,y) \in (z_0 - \sigma,\,z_0 + \sigma)$ tale che $g(x,\,y,\,h(x,\,y)) = 0$.
+
+\item $h$ è di classe $C^1$ su $\mathrm{B}_2((x_0,\,y_0),\,\delta)$ e
+\begin{center}
+$\mathrm{(\star)}$
+\hfill
+$\displaystyle
+\nabla h(x,\,y) = \left( \frac{\partial h}{\partial x}(x,	\,y),\,\frac{\partial h}{\partial y}(x,	\,y) \right) = $\hfill \null\vskip 0pt\hfill
+$= - \frac{ \left(
+\displaystyle \frac{\partial g}{\partial x} \left( x,\,y,\,h(x,\,y) \right),\,
+\displaystyle \frac{\partial g}{\partial y} \left( x,\,y,\,h(x,\,y) \right)
+\right) }{
+\displaystyle \frac{\partial g}{\partial z} \left( x,\,y,\,h(x,\,y) \right)
+}
+$
+\hfill \null \\
+\end{center}
+\end{enumerate}
+\begin{center}
+\def\svgwidth{12cm}
+\input{./03_teorema_delle_funzioni_implicite/figures/cilindro_dini.pdf_tex}
+\end{center}
+\end{thm}
+
+\subsection{Applicazione: equazione del piano tangente ad un vincolo $\mathsf{V} \subset \mathbb{R}^3$}
+Supponiamo $\mathsf{V} = \lbrace (x,\,y,\,z) \in \mathbb{R}^3 : g(x,\,y,\,z) = 0 \rbrace$ e, preso $P_0 \in \mathsf{V}$, supponiamo che $\nabla g(P_0) \neq (0,\,0,\,0)$. Come nel caso della retta tangente per $n=2$, si può provare che l'equazione del piano tangente a $\mathsf{V}$ nel punto $P_0$ è data da
+\begin{center}
+$\mathrm{(RT)}$
+\hfill
+$\displaystyle
+\nabla g(P_0) \bullet (P-P_0) = 0
+$
+\hfill \null \\
+\end{center}
+dove $P \in \mathsf{V} \subset \mathbb{R}^3$. 
+
+\begin{example}[retta tangente ad una sfera unitaria]
+$\mathsf{V} = \lbrace (x,\,y,\,z) \in \mathbb{R}^3 : x^2 + y^2 + z^2 = 1 \rbrace$.\\
+Prendendo $g(x,\,y,\,z) = x^2 + y^2 + z^2 - 1$ e $P_0 = (x_0,\,y_0,\,z_0)$, abbiamo che $\nabla g(P_0) = 2(x_0,\,y_0,\,z_0) \neq (0,\,0,\,0) \; \forall P_0 \in \mathsf{V}$. Quindi, l'equazione della retta tangente è data da
+$$
+\nabla g(P_0) \bullet (x-x_0,\,y-y_0,z-z_0) = 0 \Longleftrightarrow x_0(x-x_0) + y_0(y-y_0) + z_0(z-z_0) = 0 
+$$
+\end{example}
+
+
+\section{Caso generale del Teorema delle funzioni implicite}
+Prima di enunciare il caso generale, vediamo alcune motivazioni che hanno condotto a tale teorema.
+
+Supponiamo di considerare $x_1,\ldots,x_m,\,y_1,\ldots,y_k$ numeri reali legati tra loro da $k$ condizioni:
+$$
+\mathrm{(1)}
+\begin{cases}
+g_1(x_1,\ldots,x_m,\,y_1,\ldots,y_k) = 0\\
+g_2(x_1,\ldots,x_m,\,y_1,\ldots,y_k) = 0\\
+\vdots\\
+g_k(x_1,\ldots,x_m,\,y_1,\ldots,y_k) = 0\\
+\end{cases}
+\qquad\quad
+\begin{array}{lcl}
+x_1,\ldots,x_m &=& \text{parametri reali}\\
+y_1,\ldots,y_k &=& \text{incognite del sistema (1)}
+\end{array}
+$$
+\underline{Problema:} fissati $x_1,\ldots,x_m \in \mathbb{R}$, esistono e sono unici $y_1,\ldots,y_k \in \mathbb{R}$ verificanti (1)?
+
+Prima di rispondere, facciamo la seguente osservazione.
+
+\begin{obs}
+Supponiamo che il sistema $\mathrm{(1)}$ sia \emph{lineare}, cioè
+$$
+g_j(x_1,\ldots,x_m,\,y_1,\ldots,y_k) = \sum_{h=1}^{k} a_{jh}(x_1,\ldots,x_m) \cdot y_h - b_j(x_1,\ldots,x_m)
+$$
+dove
+$$
+\begin{array}{rl}
+a_{jh} :& \mathbb{R}^n \longrightarrow \mathbb{R}, \quad h = 1,\ldots,k\\
+b_j :& \mathbb{R}^m \longrightarrow \mathbb{R}, \quad j = 1,\ldots,k\\
+\end{array}
+$$
+sono funzioni assegnate. Equivalentemente, utilizzando l'algebra lineare, definiamo
+$$
+a(x) \doteqdot \left(
+\begin{array}{ccc}
+a_{11}(x) & \cdots & a_{1k}(x)\\
+\vdots & & \vdots\\
+a_{k1}(x) & \cdots & a_{kk}(x)\\
+\end{array}
+\right)_{k \times k}
+\text{ con} \quad
+x \in \mathbb{R}^m
+$$
+$$
+x = (x_1,\ldots,x_m), \qquad
+b(x) = \left(
+\begin{array}{c}
+b_1(x)\\
+\vdots\\
+b_k(x)\\
+\end{array}
+\right), \qquad
+y = \left(
+\begin{array}{c}
+y_1\\
+\vdots\\
+y_k\\
+\end{array}
+\right)
+$$
+Il sistema $\mathrm{(1)}$ si trasforma nel seguente sistema (lineare):
+\begin{center}
+$\mathrm{(1bis)}$
+\hfill
+$\displaystyle
+a(x) \cdot y = b(x)
+$
+\hfill \null \\
+\end{center}
+Se $\det(a(x)) \neq 0, \; \exists ! \, y \in \mathbb{R}^k$ soluzione del sistema $\mathrm{(1bis)}$ e vale
+$$
+y = a^{-1}(x) \cdot b(x)
+$$
+\end{obs}
+
+Torniamo ora al nostro sistema originario. Denotiamo
+$$
+x = (x_1,\ldots,x_m) \in \mathbb{R}^m, \qquad
+y = \left(
+\begin{array}{c}
+y_1\\
+\vdots\\
+y_k\\
+\end{array}
+\right) \in \mathbb{R}^k
+$$
+Possiamo vedere
+$$
+\mathbb{R}^m \times \mathbb{R}^k \equiv \mathbb{R}^n, \qquad \text{dove } n = m + k
+$$
+Definiamo
+$$
+g : \mathbb{R}^m \times \mathbb{R}^k \longrightarrow \mathbb{R}^k
+\qquad \text{tale che} \qquad
+g(x,\,y) = (g_1(x,\,y),\ldots,g_k(x,\,y))
+$$
+Quindi, il sistema $\mathrm{(1)}$ è equivalente alla condizione
+\begin{center}
+$\mathrm{(2)}$
+\hfill
+$\displaystyle
+g(x,\,y) = 0_{\mathbb{R}^k} = \overbrace{(0,\ldots,0)}^{k \text{ volte}}
+$
+\hfill \null \\
+\end{center}
+Se denotiamo con
+$$
+\frac{\partial g}{\partial y} = \left(
+\begin{array}{ccc}
+\dfrac{\partial g_1}{\partial y_1} & \cdots & \dfrac{\partial g_1}{\partial y_k}\\
+\vdots & & \vdots\\
+\dfrac{\partial g_k}{\partial y_1} & \cdots & \dfrac{\partial g_k}{\partial y_k}\\
+\end{array}
+\right)
+\qquad \text{e} \qquad
+\frac{\partial g}{\partial x} = \left(
+\begin{array}{ccc}
+\dfrac{\partial g_1}{\partial x_1} & \cdots & \dfrac{\partial g_1}{\partial x_m}\\
+\vdots & & \vdots\\
+\dfrac{\partial g_k}{\partial x_1} & \cdots & \dfrac{\partial g_k}{\partial x_m}\\
+\end{array}
+\right)
+$$
+osserviamo che la matrice jacobiana di $g$ sarà
+$$
+J(g)(x,\,y) = \Bigg(
+\underbrace{\frac{\partial g}{\partial x}(x,\,y)}_{k \times m},\,
+\underbrace{\frac{\partial g}{\partial y}(x,\,y)}_{k \times k}
+\Bigg)_{k \times (k+m) = k \times n}
+$$
+
+\begin{obs}
+Come osservato prima, nel caso lineare avremmo avuto
+$$
+g(x,\,y) = a(x) \cdot y - b(x)
+$$
+Notiamo che, in particolare, $a(x) = \dfrac{\partial g}{\partial y}(x,\,y)$.
+\end{obs}
+
+Nel tentativo di trovare una soluzione $y$ del sistema, si giunge all'enunciato generale del Teorema di Dini.
+
+\begin{thm}
+Siano $g : A \longrightarrow \mathbb{R}^k$ di classe $C^1$, $A \subseteq \mathbb{R}^n$ aperto, $P_0 = (x_0,\,y_0) \in A$. Denotiamo con
+$$
+\mathrm{B}_m(x_0,\,r) \doteqdot \lbrace x \in \mathbb{R}^m : ||x-x_0||_{\mathbb{R}^m} < r \rbrace
+$$
+e con
+$$
+\mathrm{B}_k(y_0,\,r) \doteqdot \lbrace y \in \mathbb{R}^k : ||y-y_0||_{\mathbb{R}^k} < r \rbrace
+$$
+Supponiamo inoltre che
+\begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\roman*)},start=1]
+\item $g(P_0) = 0$
+\item $\det \left( \dfrac{\partial g}{\partial y}(P_0) \right) \neq 0$
+\end{enumerate}
+Allora
+\begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(D\arabic*)},start=1]
+\item esistono $\delta > 0,\; \sigma > 0$ tali che $\mathrm{B}_m(x_0,\,\delta) \times \mathrm{B}_k(y_0,\,\sigma) \subseteq A$ e $\forall \, x \in \mathrm{B}_m(x_0,\,\delta)$ fissato, $\exists ! \, y \doteqdot h(x) \in \mathrm{B}_k(y_0,\,\sigma)$ tale che $g(x,\,y) = 0_{\mathbb{R}^k}$.
+
+\item $h : \mathrm{B}_m(x_0,\,\delta) \subset \mathbb{R}^m \longrightarrow \mathrm{B}_k(y_0,\,\sigma)$ è di classe $C^1$ e
+\begin{center}
+$\mathrm{(\star)}$
+\hfill
+$\displaystyle
+J(h)(x) = -
+\left( \dfrac{\partial g}{\partial y}(x,\,h(x)) \right)^{-1}
+\bullet
+\dfrac{\partial g}{\partial x}(x,\,h(x))
+$
+\hfill \null \\
+\end{center}
+\end{enumerate}
+\begin{center}
+\def\svgwidth{10cm}
+\input{./03_teorema_delle_funzioni_implicite/figures/rettangolo_dini_generale.pdf_tex}
+\end{center}
+\end{thm}
+
+\subsection{Applicazione: regola dei moltiplicatori di Lagrange nel caso generale}
+Sia $f$ una funzione da massimizzare/minimizzare su un vincolo $\mathsf{V} = \lbrace (x,\,y) \in \mathbb{R}^{m+k} : g(x,\,y) = 0_{\mathbb{R}^k} \rbrace \subset \mathbb{R}^n$ (detto anche \emph{sottovarietà di $\mathbb{R}^n$}), dove $g : \mathbb{R}^n \equiv \mathbb{R}^m \times \mathbb{R}^k \longrightarrow \mathbb{R}^k$. Vale allora il seguente teorema.
+
+\begin{thm}[dei moltiplicatori di Lagrange]
+Sia $f : \mathbb{R}^n \longrightarrow \mathbb{R}$  di classe $C^1$ e sia $g: \mathbb{R}^n \equiv \mathbb{R}^m \times \mathbb{R}^k \longrightarrow \mathbb{R}^k$ di classe $C^1$. Supponiamo che $\mathsf{V} = \lbrace (x,\,y) \in \mathbb{R}^n : g(x,\,y) = 0 \rbrace$ e sia $P^0 = (x^0,\,y^0) \in \mathsf{V}$. Se
+\begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\roman*)},start=1]
+\item $\exists \, \underset{\mathsf{V}}{\max} f = f(P^0) \qquad \text{oppure} \qquad \exists \, \underset{\mathsf{V}}{\min} f = f(P^0)$
+\item $\det \left( \frac{\partial g}{\partial y}(P^0) \right) \neq 0$
+\end{enumerate}
+allora esiste un $\lambda^0 = (\lambda_1^0,\ldots,\lambda_k^0) \in \mathbb{R}^k$ (detto \emph{moltiplicatore di Lagrange}) per cui il punto $(P^0,\,\lambda_0) \in \mathbb{R}^{n+k}$ è un punto stazionario libero della funzione $L : \mathbb{R}^{n+k} \longrightarrow \mathbb{R}$ (detta \emph{funzione lagrangiana}) definita
+$$
+L(x,\,y,\,\lambda) \doteqdot f(x,\,y) + \lambda_1 g_1(x,\,y) + \lambda_2 g_2(x,\,y) + \ldots + \lambda_k g_k(x,\,y)$$
+dove $(x,\,y,\,\lambda) \in \mathbb{R}^{n+k}$.
+\end{thm}

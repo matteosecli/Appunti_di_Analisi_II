@@ -1,0 +1,175 @@
+\documentclass[italian,11pt,pdftex,a4paper]{book}
+	%Bozza fino a completamento documento
+	\usepackage[nostamp]{draftwatermark}
+	%\usepackage{draftwatermark}
+	\SetWatermarkText{BOZZA}
+	\SetWatermarkLightness{0.9}
+	\SetWatermarkScale{4}
+	%
+\usepackage{etex}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{xmpincl}
+\includexmp{metadata}
+\setcounter{secnumdepth}{3} % organisational level that receives a numbers
+\setcounter{tocdepth}{3}    % print table of contents for level 3
+%\usepackage{layout}
+\usepackage{fancyhdr}
+\usepackage[margin=10pt,font=small,labelfont=bf]{caption} 
+\setlength{\parskip}{\smallskipamount}
+%\setlength{\parindent}{0pt}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage[italian]{babel}
+%\usepackage[fixlanguage]{babelbib}
+%\usepackage[bibstyle=alphabetic]{biblatex}
+\usepackage{datetime}
+\newdateformat{version}{\THEYEAR\twodigit{\THEMONTH}\twodigit{\THEDAY}}
+\newtimeformat{microversion}{\twodigit{\THEHOUR}\twodigit{\THEMINUTE}\twodigit{\THESECOND}}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{cancel}
+\usepackage[nottoc]{tocbibind}
+\usepackage[     unicode=true,
+                 plainpages = false, 
+                 pdfpagelabels, 
+                 bookmarks=true,
+                 bookmarksnumbered=true,
+                 bookmarksopen=true,
+                 breaklinks=true,
+                 backref=false,
+                 colorlinks=true,
+                 linkcolor = blue,
+                 urlcolor  = blue,
+                 citecolor = red,
+                 anchorcolor = green,
+                 hyperindex = true,
+                 hyperfigures
+] {hyperref}
+\hypersetup{
+ pdftitle={Appunti di Analisi II},
+ pdfauthor={Matteo Seclì <secli.matteo@gmail.com>},
+ pdfsubject={Appunti delle lezioni di Francesco Serra Cassano}
+}
+\usepackage{pdfpages}
+\includepdfset{pages=-, offset=0mm 1cm,
+%\includepdfset{pages=-, frame, offset=0mm 1cm,
+   pagecommand={\thispagestyle{fancy}}}
+
+\makeatletter
+\newtheorem{thm}{\protect\theoremname}
+\newtheorem*{thm*}{\protect\theoremname}
+%\newenvironment{shortthm*}[1]
+%  {\theoremname:\thmnote{ #1}}
+% % {\textbf{\theoremname\space}({#1})\textbf{.}\itshape}
+%  {}
+\numberwithin{thm}{section}
+\renewenvironment{proof}{\vskip 1em \noindent\textsc{Dimostrazione:}}{\begin{flushright}$\blacksquare$\end{flushright}\vskip 1em}
+\newtheorem{definition}{Definizione}
+\numberwithin{definition}{section}
+\newtheorem{obs}{Osservazione}
+\numberwithin{obs}{section}
+\newtheorem{proposition}{Proposizione}
+\numberwithin{proposition}{section}
+\newtheorem{lemma}{Lemma}
+\numberwithin{lemma}{section}
+\newtheorem{cor}{Corollario}
+\numberwithin{cor}{section}
+\newtheorem*{exer}{Esercizio}
+\newtheorem*{example}{Esempio}
+\@ifundefined{date}{}{\date{}}
+%\usepackage{bbold}
+\usepackage{pgfplots}
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{epstopdf}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+\renewcommand*{\thefootnote}{(\arabic{footnote})}
+\makeatother
+
+\setlength{\paperheight}{297mm}
+\setlength{\paperwidth}{210mm}
+\setlength{\oddsidemargin}{1.5cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\topmargin}{1mm}
+\setlength{\headheight}{1.36cm}
+\setlength{\headsep}{1.00cm}
+\setlength{\textheight}{20.84cm}
+\setlength{\textwidth}{14.5cm}
+\setlength{\marginparsep}{1mm}
+\setlength{\marginparwidth}{3cm}
+\setlength{\footskip}{2.36cm}
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\thechapter. #1 }}{}}
+%\renewcommand{\chaptermark}[1]{\markboth{\textsc{\thechapter. #1 }}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[RO]{\bfseries\rightmark}
+\fancyhead[LE]{\bfseries\leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt}
+\fancypagestyle{plain}{
+  \fancyhead{}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+%\fancypagestyle{firstpgchap}
+%{  \fancyhf{}
+%   \fancyfoot[L]{\tiny \texttt{\textcolor{gray}{Versione: \version\today-\microversion}}}
+%}
+
+%\def\Vhrulefill{\leavevmode\leaders\hrule width 3cm height 0.7ex depth \dimexpr0.4pt-0.7ex\hfill\kern0pt}
+\def\Vhrulefill{\leavevmode\leaders\hrule height 0.7ex depth \dimexpr0.4pt-0.7ex\hskip1em plus 1fill \kern0pt}
+\newcommand{\Rigaln}[1]{\Vhrulefill \; #1 \; \Vhrulefill}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\usepackage{tikz}
+\newcommand\copyrighttext{%
+  \tiny \texttt{\textcolor{gray}{Versione: \version\today-\microversion}}}
+\newcommand\copyrightnotice{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=south,yshift=18pt] at (current page.south) 
+{\parbox{\dimexpr\textwidth}{\copyrighttext}};
+%{\fbox{\parbox{\dimexpr\textwidth-\fboxsep-\fboxrule\relax}{\copyrighttext}}};
+\end{tikzpicture}%
+}
+
+\providecommand{\theoremname}{Teorema}
+
+\begin{document}
+
+\renewcommand\baselinestretch{1.2}
+\baselineskip=18pt plus1pt
+
+\include{00_frontmatter/frontmatter_title}
+\include{00_frontmatter/titlepage}
+\include{00_frontmatter/frontmatter_index}
+
+\include{01_calcolo_in_piu_variabili/01_calcolo_in_piu_variabili}
+\include{02_massimi_e_minimi/02_massimi_e_minimi}
+\include{03_teorema_delle_funzioni_implicite/03_teorema_delle_funzioni_implicite}
+\include{04_ODEs/04_ODEs}
+\include{05_serie_di_fourier/05_serie_di_fourier}
+
+%\appendix
+%\renewcommand{\appendixname}{Appendice}
+%\chapter{Misure}
+
+%\begin{multicols}{2}
+\begin{footnotesize}
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\bibliographystyle{babalpha}
+\bibliographystyle{06_backmatter/math}
+\bibliography{06_backmatter/references}
+\end{footnotesize}
+%\end{multicols}
+
+\end{document}
