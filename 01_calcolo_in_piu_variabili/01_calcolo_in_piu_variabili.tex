@@ -105,7 +105,12 @@ Ma\dots operativamente? Ricordiamo innanzitutto che, presi $P_h(x_h,\, y_h)$ e $
 Siano $(P_h)_h \subset \mathbb{R}^2$ e $P_0 \in \mathbb{R}^2$.
 \begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\roman*)},start=1]
 \item Se $P_h=(x_h,\, y_h)$ e $P_0=(x_0,\, y_0)$, allora vale che:
-$$\exists \, \lim_{h \rightarrow +\infty} P_h = P_0 \; \text{(in } \mathbb{R}^2\text{)} \quad \Longleftrightarrow \quad \exists \, \lim_{h \rightarrow +\infty} y_h = y_0 \; \text{(in } \mathbb{R}^2\text{)}$$
+$$\exists \, \lim_{h \rightarrow +\infty} P_h = P_0 \; \text{(in } \mathbb{R}^2\text{)} \quad \Longleftrightarrow \quad 
+\begin{cases}
+\exists \, \lim_{h \rightarrow +\infty} x_h = x_0\\
+\exists \, \lim_{h \rightarrow +\infty} y_h = y_0
+\end{cases}
+ \; \text{(in } \mathbb{R}\text{)}$$
 \item (Criterio di Cauchy)
 $$\exists \, \lim_{h \rightarrow +\infty} P_h = P_0 \; \text{(in } \mathbb{R}^2\text{)}$$
 $$\Updownarrow$$
