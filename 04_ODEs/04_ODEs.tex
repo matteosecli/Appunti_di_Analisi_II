@@ -21,7 +21,7 @@ $$
 $$
 \mathrm{d}(x_h,\,x_k) < \varepsilon \qquad \forall h,\,k > \overline{h}
 $$
-\item Uno spazio metrico $(X,\,\mathrm{d})$ si dice \emph{completo} se ogni successione $(x_n)_n \subset X$ è convergente, cioè $\exists \, x \in X$ tale che
+\item Uno spazio metrico $(X,\,\mathrm{d})$ si dice \emph{completo} se ogni successione di Cauchy $(x_n)_n \subset X$ è convergente, cioè $\exists \, x \in X$ tale che
 $$
 \exists \, \lim_{h \rightarrow \infty} \mathrm{d}(x_h,\,x) = 0
 $$
@@ -254,7 +254,7 @@ $
 \end{center}
 Fissiamo $h$ nella $\mathrm{(2)}$ e facciamo tendere $k \rightarrow \infty$, ottenendo che $\forall \varepsilon > 0 \quad \exists \, \overline{h} = \overline{h}(\varepsilon) \in \mathbb{N}$ tale che
 \begin{center}
-$\mathrm{(3)}$
+$\mathrm{(5)}$
 \hfill
 $\displaystyle
 \left| f_h(t)-f(t) \right| \leq \varepsilon \qquad \forall \, h > \overline{h}, \quad \forall \, t in [a,\,b]
@@ -457,7 +457,7 @@ Dividiamo la dimostrazione del teorema in tre passi.
 	$\Updownarrow$\\
 	$
 	\begin{cases}
-	x \in C^0(t_0-\delta_0,\,t_0+\delta_0)\\
+	x \in C^0([t_0-\delta_0,\,t_0+\delta_0])\\
 	G_x \subseteq A\footnotemark\\
 	\mathrm{(EqInt)} \qquad \displaystyle x(t) = x_0 + \int_{t_0}^t f(s,\,x(s)) \mathrm{d}s & \quad \forall \, t \in [t_0-\delta,\,t_0+\delta]
 	\end{cases}
