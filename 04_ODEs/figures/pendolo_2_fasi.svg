@@ -14,7 +14,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="pendolo_2_fasi.pdf">
+   sodipodi:docname="pendolo_2_fasi.svg">
   <defs
      id="defs4">
     <marker
@@ -290,7 +290,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -335,23 +335,13 @@
            style="font-size:12px" /></flowRegion><flowPara
          id="flowPara4833-1-8">$y$</flowPara></flowRoot>    <path
        sodipodi:type="arc"
-       style="stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none"
-       id="path5697"
-       sodipodi:cx="766.5"
-       sodipodi:cy="249.59448"
-       sodipodi:rx="3"
-       sodipodi:ry="3"
-       d="m 769.5,249.59448 c 0,1.65686 -1.34315,3 -3,3 -1.65685,0 -3,-1.34314 -3,-3 0,-1.65685 1.34315,-3 3,-3 1.65685,0 3,1.34315 3,3 z"
-       transform="translate(-53.5,409.7677)" />
-    <path
-       sodipodi:type="arc"
        style="fill:none;stroke:#000000;stroke-width:0.54440155000000001;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-mid:url(#Arrow1Mend)"
        id="path5724"
        sodipodi:cx="732.5"
        sodipodi:cy="348.09448"
        sodipodi:rx="16.5"
        sodipodi:ry="16.5"
-       d="m 749,348.09448 a 16.5,16.5 0 1 1 -33,0 16.5,16.5 0 1 1 33,0 z"
+       d="m 749,348.09448 c 0,9.1127 -7.3873,16.5 -16.5,16.5 -9.1127,0 -16.5,-7.3873 -16.5,-16.5 0,-9.1127 7.3873,-16.5 16.5,-16.5 9.1127,0 16.5,7.3873 16.5,16.5 z"
        transform="matrix(1.8368794,0,0,1.8368794,-632.55015,19.454587)" />
     <flowRoot
        xml:space="preserve"

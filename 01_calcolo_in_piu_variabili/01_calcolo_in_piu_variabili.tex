@@ -129,7 +129,7 @@ $\displaystyle \frac{|a|+|b|}{\sqrt{2}} \leq \sqrt{a^2+b^2} \leq |a|+|b|$
 Scegliendo come $a=x_h-x_0$ e $b=y_h-y_0$ otteniamo che:
 \begin{center}
 \hfill
-$\displaystyle \frac{|x_h-x_0|+|y_h-y_0|}{\sqrt{2}} \leq \mathrm{d}(P_h-P_0) \leq |x_h-x_0|+|y_h-y_0|$
+$\displaystyle \frac{|x_h-x_0|+|y_h-y_0|}{\sqrt{2}} \leq \mathrm{d}(P_h,\,P_0) \leq |x_h-x_0|+|y_h-y_0|$
 \hfill\refstepcounter{equation}\textnormal{(\theequation)}
 \end{center}
 
@@ -140,7 +140,7 @@ Usando il criterio del confronto per successioni di numeri reali su \textnormal{
 \textnormal{(}$\Leftarrow$\textnormal{)} Scegliendo $a=x_h-x_k$ e $b=y_h-y_k$, dalla \textnormal{(1.1)} segue che:
 \begin{center}
 \hfill
-$\displaystyle \frac{|x_h-x_k|+|y_h-y_k|}{\sqrt{2}} \leq \mathrm{d}(P_h-P_k) \leq |x_h-x_k|+|y_h-y_k| \qquad \forall \, h,\, k \in \mathbb{N}$
+$\displaystyle \frac{|x_h-x_k|+|y_h-y_k|}{\sqrt{2}} \leq \mathrm{d}(P_h,\,P_k) \leq |x_h-x_k|+|y_h-y_k| \qquad \forall \, h,\, k \in \mathbb{N}$
 \hfill\refstepcounter{equation}\textnormal{(\theequation)}
 \end{center}
 Poichè $(x_h)_h,\; (y_h)_h \subset \mathbb{R}$, applicando la \textnormal{(1.3)} e il Criterio di Cauchy per successioni di numeri reali, segue la tesi.
@@ -262,13 +262,13 @@ e il fatto che la successione $\left( \frac{1}{|Mb_h|} \right)_h$ è limitata.
 \item Poiché $f(P) \leq g(P) \quad \forall \, P \in A \setminus \lbrace P_0 \rbrace$, possiamo supporre che $\; \exists \, \lambda_{f(P)} = \lambda (f(P)) > 0$ tale che $f(P) + \lambda_{f(P)} = g(P) \quad \forall \, P \in A \setminus \lbrace P_0 \rbrace$.
 
 Passando a limite e utilizzando (i), otteniamo che
-$$ \lim_{P \rightarrow P_0} (f(P) + \lambda_{f(P)}) = \lim_{P \rightarrow P_0} f(P) \quad \Longleftrightarrow \quad \lim_{P \rightarrow P_0} (f(P)) + \lim_{P \rightarrow P_0} (\lambda_{f(P)}) = \lim_{P \rightarrow P_0} f(P)$$
+$$ \lim_{P \rightarrow P_0} (f(P) + \lambda_{f(P)}) = \lim_{P \rightarrow P_0} g(P) \quad \Longleftrightarrow \quad \lim_{P \rightarrow P_0} (f(P)) + \lim_{P \rightarrow P_0} (\lambda_{f(P)}) = \lim_{P \rightarrow P_0} g(P)$$
 ossia $L \leq M$.
 \item Proviamo che, per ogni successione $(P_h)_h \subset A \setminus \lbrace P_0 \rbrace \;$ con $\; \displaystyle \lim_{h \rightarrow +\infty} P_h = P_0$, vale che
 $$\exists \, \lim_{h \rightarrow +\infty} F(f(P_h)) = F(L) \qquad \text{(in } \mathbb{R} \text{)}$$
 Sia $(P_h)_h \subset A \setminus \lbrace P_0 \rbrace \;$ tale che $\; \displaystyle \lim_{h \rightarrow +\infty} P_h = P_0$. Per ipotesi, se denotiamo con $a_h \doteqdot f(P_h) \quad (h \in \mathbb{N})$, allora per $(1) \Longrightarrow (2)$ del teorema sulla caratterizzazione del limite, $\; \displaystyle \lim_{h \rightarrow +\infty} a_h = L \quad \text{(in } \mathbb{R} \text{)}$.
 
-Consideriamo la successione $(F(a_h))_h \subset \mathbb{R}$. Poiché $F$ è continua nel punto $L$, per definizione di funzione continua su $\mathbb{R}$ segue che $\displaystyle \exists \, lim_{h \rightarrow +\infty} F(a_h) = F(L)$. La tesi è dimostrata.
+Consideriamo la successione $(F(a_h))_h \subset \mathbb{R}$. Poiché $F$ è continua nel punto $L$, per definizione di funzione continua su $\mathbb{R}$ segue che $\displaystyle \exists \, \lim_{h \rightarrow +\infty} F(a_h) = F(L)$. La tesi è dimostrata.
 \end{enumerate}
 \end{proof}
 
@@ -342,7 +342,7 @@ Mostrare che la distanza $\mathrm{d}$ verifica le seguenti proprietà:
 \begin{definition}
 Dato $\; P_0 = (x_1^0,\ldots,x_n^0) \in \mathbb{R}^n \;$ e $r>0$, si chiama \emph{intorno (sferico)} di centro $P_0$ e raggio $r>0$ l'insieme definito da:
 $$\mathrm{B}(P_0,\, r)=
-\lbrace P \in \mathbb{R}^n : \mathrm{d}(P,\, P_0) < r \rbrace = \lbrace (x_1,\ldots,x_n) \in \mathbb{R}^n : (x_1-x_1^0)^2+(x_n-x_n^0)^2 < r^2 \rbrace$$
+\lbrace P \in \mathbb{R}^n : \mathrm{d}(P,\, P_0) < r \rbrace = \lbrace (x_1,\ldots,x_n) \in \mathbb{R}^n : (x_1-x_1^0)^2 + \ldots + (x_n-x_n^0)^2 < r^2 \rbrace$$
 \end{definition}
 
 In generale, possiamo dire che le nozioni topologiche introdotte per $n=2$ e la definizione di limite per funzioni a due variabili si estendono al caso $n \geq 3$.
@@ -572,7 +572,7 @@ $$
 \frac{f(P)-L(P-P_0)-f(P_0)}{\mathrm{d}(P,\,P_0)}
 $$
 
-Dove il numeratore è del tipo ``Funzione''$-$``Piano Tangente''. A questo punto, è naturale dare la seguente definizione.
+dove il numeratore è del tipo ``Funzione''$-$``Piano Tangente''. A questo punto, è naturale dare la seguente definizione.
 
 \begin{definition}
 Siano $\; A \subseteq \mathbb{R}^2 \;$ un insieme aperto, $P_0 \in A$ fissato, $f:A \longrightarrow \mathbb{R}$. Si dice che \emph{$f$ è differenziabile nel punto $P_0$} se esiste una applicazione lineare $\; L: \mathbb{R}^2 \longrightarrow \mathbb{R} \;$ tale che
@@ -678,7 +678,7 @@ Siano $A \subseteq \mathbb{R}^n$ aperto, $f: A \longrightarrow \mathbb{R}$, $P^0
 
 Essendo $A$ aperto, $\exists \, \delta_0 > 0$ tale che $\mathrm{B}(P^0,\,\delta_0) \subseteq A$. \`E ben definito il rapporto incrementale rispetto alla direzione $i$-esima
 $$
-(\delta_0,\,\delta_0) \setminus \lbrace P^0 \rbrace \ni h \longmapsto
+\mathrm{B}(P_0,\,\delta_0) \setminus \lbrace P^0 \rbrace \ni h \longmapsto
 \frac{f(P^0+he_i)-f(P^0)}{h}
 $$
 
@@ -715,7 +715,7 @@ Siano $A \subseteq \mathbb{R}^n$ aperto, $f: A \longrightarrow \mathbb{R}$, $P^0
 
 Essendo $A$ aperto, $\exists \, \delta_0 > 0$ tale che $\mathrm{B}(P_0,\,\delta_0) \subseteq A$. \`E ben definito il rapporto incrementale rispetto alla direzione $v$
 $$
-(\delta_0,\,\delta_0) \setminus \lbrace P_0 \rbrace \ni h \longmapsto
+\mathrm{B}(P_0,\,\delta_0) \setminus \lbrace P_0 \rbrace \ni h \longmapsto
 \frac{f(P_0+hv)-f(P_0)}{h}
 $$
 
@@ -734,7 +734,7 @@ $$
 \end{proposition}
 \begin{proof}
 Scegliamo $P=P_0+hv$. Dalla (D) segue che
-$$ \lim_{h \rightarrow 0} \frac{f(P_0+hv)-\overset{\overset{hL(v)}{\shortparallel}}{L(hv)}-f(P_0)}{|h|} = 0 \quad \Longleftrightarrow \quad \exists \, \lim_{h \rightarrow 0} \frac{f(P_0+hv)-f(P_0)}{h} \quad \overset{def}{\Longleftrightarrow}$$
+$$ \lim_{h \rightarrow 0} \frac{f(P_0+hv)-\overset{\overset{hL(v)}{\shortparallel}}{L(hv)}-f(P_0)}{|h|} = 0 \quad \Longleftrightarrow \quad \exists \, \lim_{h \rightarrow 0} \frac{f(P_0+hv)-f(P_0)}{h} = L(v) \quad \overset{def}{\Longleftrightarrow}$$
 $$\overset{def}{\Longleftrightarrow} \quad df(P_0)(v) = \frac{\partial f}{\partial v} (P_0)$$
 Come nel caso bidimensionale, leggendo $v$ sulla base canonica e usando la linearità di $L$ si verifica che
 $$
@@ -803,7 +803,7 @@ In termini di $f$, possiamo rileggere l'uguaglianza come
 	\end{center}
 
 Analogamente, consideriamo la funzione (di una variabile reale):
-$$h:[y_0-\delta_1,\,y_0+\delta_1] \rightarrow \mathbb{R}, \qquad h(x) = f(x_0,\,y)$$
+$$h:[y_0-\delta_1,\,y_0+\delta_1] \rightarrow \mathbb{R}, \qquad h(y) = f(x_0,\,y)$$
 
 Di nuovo, otteniamo da (i) che la funzione $h$ è derivabile in $[y_0-\delta_1,\,y_0+\delta_1]$ e possiamo applicare il Teorema del valor medio di Lagrange ottenendo che
 $$h(y)-h(y_0) = h'(c_y)(y-y_0)$$
@@ -849,7 +849,7 @@ $\displaystyle
 \vskip 16pt
 \hfill
 $\displaystyle
-\frac{\displaystyle \left\lvert \overbrace{\left( \frac{\partial f}{\partial x}(c_x,\,y) - \frac{\partial f}{\partial x}(P_0) \right)}^{\doteqdot \, \varphi_1 (x,\,y)} (x-x_0) + \overbrace{\left( \frac{\partial f}{\partial y}(x_0,\,c_y)) - \frac{\partial f}{\partial y}(P_0) \right)}^{\doteqdot \, \varphi_2 (x,\,y)} (y-y_0) \right\rvert }{\mathrm{d}(P,\,P_0)} \overset{\forall \, P \in Q \setminus \left\lbrace P_0 \right\rbrace}{\leq} $
+\frac{\displaystyle \left\lvert \overbrace{\left( \frac{\partial f}{\partial x}(c_x,\,y) - \frac{\partial f}{\partial x}(P_0) \right)}^{\doteqdot \, \varphi_1 (x,\,y)} (x-x_0) + \overbrace{\left( \frac{\partial f}{\partial y}(x_0,\,c_y) - \frac{\partial f}{\partial y}(P_0) \right)}^{\doteqdot \, \varphi_2 (x,\,y)} (y-y_0) \right\rvert }{\mathrm{d}(P,\,P_0)} \overset{\forall \, P \in Q \setminus \left\lbrace P_0 \right\rbrace}{\leq} $
 \hfill \null \\
 \hfill
 $\displaystyle \left\lvert \varphi_1(x,\,y) \right\rvert \overbrace{\left( \frac{|x-x_0|}{\mathrm{d}(P,\,P_0)} \right)}^{\footnotemark} + \left\lvert \varphi_2(x,\,y) \right\rvert \left( \frac{|y-y_0|}{\mathrm{d}(P,\,P_0)} \right) \leq
@@ -1032,7 +1032,7 @@ Per ipotesi, $f$ è differenziabile nel punto $P_0 \doteqdot g(t_0)$, per cui po
 \begin{center}
 $\mathrm{(2)}$
 \hfill
-$\displaystyle f(P) = f(P_0) +df(P_0)(P-P_0) + \sigma(P) = 0, \qquad \forall \, P \in A$
+$\displaystyle f(P) = f(P_0) +df(P_0)(P-P_0) + \sigma(P), \qquad \forall \, P \in A$
 \hfill \null \\
 \end{center}
 dove
@@ -1043,7 +1043,7 @@ $\displaystyle \lim_{P \rightarrow P_0} \frac{\sigma(P)}{||P-P_0||} = 0$
 \hfill \null \\
 \end{center}
 Quindi, prendendo $P = g(t)$, otteniamo:
-$$\mathrm{(1)} \overset{\mathrm{(3)}}{=} \frac{df(P_0)(g(t)-g(t_0)) + \sigma(g(t))}{t-t_0} = \frac{\nabla f(P_0) \bullet (g(t)-g(t_0)) + \sigma(g(t))}{t-t_0}  = $$
+$$\mathrm{(1)} \overset{\mathrm{(2)}}{=} \frac{df(P_0)(g(t)-g(t_0)) + \sigma(g(t))}{t-t_0} = \frac{\nabla f(P_0) \bullet (g(t)-g(t_0)) + \sigma(g(t))}{t-t_0}  = $$
 $$ = \nabla f(P_0) \bullet \frac{(g(t)-g(t_0))}{t-t_0} + \frac{\sigma(g(t))}{t-t_0}$$
 
 Se mostriamo che, passando a limite, il secondo addendo di questa somma va a $0$, completiamo la dimostrazione. Pertanto, definiamo la funzione
@@ -1077,7 +1077,7 @@ $$\overline{P_1P_2} \doteqdot \lbrace tP_1+(1-t)P_2 : 0 \leq t \leq 1 \rbrace \s
 Allora, $\forall \, P_1,\,P_2 \in A, \quad f(P_2)-f(P_1) = \nabla f(P^*)(P_2-P_1)$ per un opportuno punto $P^* \in \overline{P_1P_2}$.
 \end{thm}
 \begin{proof}
-Definiamo la curva $g:[0,\,1] \rightarrow \mathbb{R}^n$ tale che
+Definiamo la curva $g:[0,\,1] \rightarrow \mathbb{R}^2$ tale che
 $$
 g(t) = tP_2 + (1-t)P_1 = P_1 + t(P_2-P_1), \qquad 0 \leq t \leq 1
 $$
@@ -1113,7 +1113,7 @@ Fissiamo $P_0 \in A$. Preso $P \in A$, per il teorema del valor medio $\exists \
 $$
 f(P) - f(P_0) = \nabla f(P^*) \bullet (P-P_0)
 $$
-Ma $\nabla f(P) = 0 \quad \forall \, P$ per ipotesi, quindi sarà nullo anche in $P_0$. L'uguaglianza precedente diventa perciò
+Ma $\nabla f(P) = 0 \quad \forall \, P$ per ipotesi, quindi sarà nullo anche in $P^*$. L'uguaglianza precedente diventa perciò
 $$
 f(P) - f(P_0) = 0 \quad \Longrightarrow \quad f(P) = f(P_0) 
 $$ 
@@ -1142,7 +1142,7 @@ Sia $A \subseteq \mathbb{R}^n$ aperto e convesso. Provare che $A$ è anche conne
 \begin{proof}
 \underline{(Idea)}
 
-La dimostrazione procede per assurdo. Supponiamo che $A = B \sqcup C$, con $B,\,C$ aperti, disgiunti e non vuoti. Se $A$ è convesso, c'è l'assurdo che devo ``bucare'' l'interfaccia che crea l'unione disgiunta per poter unire un punto di $B$ e un punto di $C$, ossia per unire due particolare punti di $A$!
+La dimostrazione procede per assurdo. Supponiamo che $A = B \sqcup C$, con $B,\,C$ aperti, disgiunti e non vuoti. Se $A$ è convesso, c'è l'assurdo che devo ``bucare'' l'interfaccia che crea l'unione disgiunta per poter unire un punto di $B$ e un punto di $C$, ossia per unire due particolari punti di $A$!
 
 \begin{center}
 \def\svgwidth{8cm}
@@ -1222,7 +1222,7 @@ $\displaystyle df(P_0)(v) = \Big( df_1(P_0)(v),\,df_2(P_0)(v),\ldots,df_m(P_0)(v
 \begin{proof}
 Dalla $(\star)$ della proposizione precedente segue che:
 $$
-\frac{1}{\sqrt{m}} \sum_{i=1}^m \frac{|f_i(P)-f_i(P_0)-L_i(P-P_0)|}{||P-P_0||_n} \leq \frac{||f(P)-f(P_0)-L(P-P_0)||_m}{||P-P_0||} \leq
+\frac{1}{\sqrt{m}} \sum_{i=1}^m \frac{|f_i(P)-f_i(P_0)-L_i(P-P_0)|}{||P-P_0||_n} \leq \frac{||f(P)-f(P_0)-L(P-P_0)||_m}{||P-P_0||_n} \leq
 $$
 $$
 \leq \sum_{i=1}^m \frac{|f_i(P)-f_i(P_0)-L_i(P-P_0)|}{||P-P_0||_n}
@@ -1240,7 +1240,7 @@ Allo stesso modo, procedendo al contrario.
 \begin{cor}
 Sia $A \subseteq \mathbb{R}^n$ aperto, $P_0 \in A$ fissato, $f : A \longrightarrow \mathbb{R}^m$. Supponiamo inoltre che $f$ sia differenziabile nel punto $P_0$. Allora
 \begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\roman*)},start=1]
-\item $\displaystyle \exists \, \frac{\partial f_i}{\partial x_j} (P_0) \qquad \forall \, i=1,\ldots,m$
+\item $\displaystyle \exists \, \frac{\partial f_i}{\partial x_j} (P_0) \qquad \forall \, i=1,\ldots,m, \quad \forall \, j = 1,\ldots,n$
 \item $df(P_0)(v) = \Big(J(f)\Big)(P_0) \cdot v$, con $v=(v_1,\ldots,v_n)^T$ un vettore colonna,
 $$
 J(f)(P_0) = \left[ J_{ij} \right]_{m \times n} \qquad \text{dove} \qquad J_{ij} = \frac{\partial f_i}{\partial x_j} (P_0)
@@ -1300,7 +1300,7 @@ Supponiamo che:
 \begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\roman*)},start=1]
 \item $g(A) \subseteq B$
 \item $g$ sia differenziabile nel punto $x_0$
-\item $f$ sia differenziabile nel punto $y = g(x_0)$
+\item $f$ sia differenziabile nel punto $y_0 = g(x_0)$
 \end{enumerate}
 Allora l'applicazione composta $h = f \circ g : A \longrightarrow \mathbb{R}^k$ è differenziabile nel punto $x_0$ e
 \begin{center}
@@ -1316,7 +1316,7 @@ Operativamente, risulterebbe più semplice avere la RDC rispetto alle jacobiane.
 \begin{center}
 $\underset{\text{\tiny rispetto alle jacobiane}}{\mathrm{(RDC)}}$
 \hfill
-$\displaystyle \underbrace{J(h)(x_0)}_{k \times n} = \underbrace{J(f)(g(x_0))}_{k \times \cancel{m}} \circ \underbrace{J(g)(x_0)}_{\cancel{m} \times n}$
+$\displaystyle \underbrace{J(h)(x_0)}_{k \times n} = \underbrace{J(f)(g(x_0))}_{k \times \cancel{m}} \cdot \underbrace{J(g)(x_0)}_{\cancel{m} \times n}$
 \hfill \null \\
 \end{center}
 se $h=h(x)=(h_1(x),\ldots,h_k(x))$, $y=g(x)$, $f=f(y)$. Quindi,
@@ -1366,7 +1366,7 @@ Osserviamo che, da $(ii)$ e $(iii)$, segue che:
 con $\sigma : A \longrightarrow \mathbb{R}^m$ e $\rho : B \longrightarrow \mathbb{R}^k$ verificanti:
 \begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\arabic*)},start=3]
 \item $\displaystyle \lim_{x \rightarrow x_0} \frac{||\sigma(x)||_m}{||x-x_0||_n} = 0$
-\item $\displaystyle \lim_{y \rightarrow y_0} \frac{||\rho(y)||_k}{||x-x_0||_m} = 0$
+\item $\displaystyle \lim_{y \rightarrow y_0} \frac{||\rho(y)||_k}{||y-y_0||_m} = 0$
 \end{enumerate}
 Volendo riscrivere $(D)$ in termini di $f$ e $g$, osserviamo che:
 \begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\arabic*)},start=5]
@@ -1402,7 +1402,10 @@ $\displaystyle ||Av||_{\mathbb{R}^m} \leq ||A|| \cdot ||v||_n$
 dove $\displaystyle ||A|| \overset{def}{=} \sqrt{\sum_{i=1}^m \sum_{j=1}^n a_{ij}^2}$.
 Da $(3)+(\star)$ abbiamo quindi che
 $$
-\left\lvert \left\lvert df(y_0) \left( \frac{\sigma(x)}{||x-x_0||_n} \right) \right\lvert \right\lvert_k \underset{x \rightarrow x_0}{\longrightarrow} 0
+\left\lvert \left\lvert df(y_0) \left( \frac{\sigma(x)}{||x-x_0||_n} \right) \right\lvert \right\lvert_k =
+\left\lvert \left\lvert J(f)(y_0) \cdot \left( \frac{\sigma(x)}{||x-x_0||_n} \right) \right\lvert \right\lvert_k \leq
+|| J(f)(y_0)_{k \times m} || \cdot \frac{||\sigma(x)||_m}{||x-x_0||_n}
+\underset{x \rightarrow x_0}{\longrightarrow} 0
 $$
 Per concludere e provare la $(6)$, basta ora mostrare che:
 \begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\arabic*)},start=7]
@@ -1585,7 +1588,7 @@ $\mathrm{(3)}$
 $\displaystyle D^{\alpha} f (x^0 + t(x-x^0)) = \frac{\partial^k f}{\partial x_{i_1} \ldots \partial x_{i_k}} (x^0 + t(x-x^0))$
 \hfill \null \\
 \end{center}
-per una opportuna funzione $i : \lbrace 1,\,k \rbrace \longrightarrow \lbrace 1,\,2 \rbrace$ quando $i_j \overset{def}{=} i(j)$
+per una opportuna funzione $i : \lbrace 1,\,k \rbrace \longrightarrow \lbrace 1,\,2 \rbrace$ quando $i_j \overset{def}{=} i(j)$.
 
 Tenendo presente il teorema di inversione dell'ordine delle derivate parziali, vale $\mathrm{(3)}$ se e solo se:
 \begin{center}
@@ -1607,14 +1610,14 @@ $\displaystyle F^{(k)}(t) =$\\
 $\displaystyle = \sum_{i_1=1,\ldots,i_k=1}^2
 \frac{\partial^k f}{\partial x_{i_1} \ldots \partial x_{i_k}}(x^0+t(x-x^0))
 \underbrace{(x_1-x_1^0)^{\alpha_1} (x_2-x_2^0)^{\alpha_2}}_{\equiv (x-x^0)^{\alpha}}=$\\
-$\displaystyle = \sum_{|\alpha=k|}
+$\displaystyle = \sum_{|\alpha|=k}
 \frac{k!}{\alpha_1!\, \alpha_2!} D^{\alpha}f(x^0+t(x-x^0))
 (x-x^0)^{\alpha}$
 \end{flushleft}
 Applichiamo ora la $\mathrm{(1)}$ con $t=1$:
 \begin{flushleft}
 $\displaystyle f(x) = F(1) =$\\
-$\displaystyle = \sum_{k=0}^m \sum_{|\alpha|=k} \frac{D^{\alpha}f(x^0)}{\alpha!}(x-x^0)^{\alpha} + \sum_{|\alpha|=m+1} \frac{D^{\alpha}f(x^0+t(x-x^0))}{\alpha!}(x-x^0)^{\alpha} \doteqdot $\\
+$\displaystyle = \sum_{k=0}^m \sum_{|\alpha|=k} \frac{D^{\alpha}f(x^0)}{\alpha!}(x-x^0)^{\alpha} + \sum_{|\alpha|=m+1} \frac{D^{\alpha}f(x^0+\overline{t}(x-x^0))}{\alpha!}(x-x^0)^{\alpha} \doteqdot $\\
 $\displaystyle \doteqdot P_m(f,\,x^0)(x) + R_m(x,\,x^0)$
 \end{flushleft}
 \end{proof}
@@ -1685,7 +1688,7 @@ Supponiamo che $m=2$. Se $f \in C^2(\mathrm{B}(x^0,\,r_0))$, allora vale che:
 $$f(x) = P_2(f,\,x^0)(x) + R_2(x,\,0)$$
 con
 \begin{flushleft}
-$\displaystyle P_2(f,\,x^0) = $
+$\displaystyle P_2(f,\,x^0) $
 $\displaystyle = \sum_{|\alpha| < 2} \frac{D^{\alpha}(f(x^0))}{\alpha!}(x-x^0)^{\alpha}=$
 $\displaystyle = \sum_{|\alpha| = 0} \frac{D^{\alpha}(f(x^0))}{\alpha!}(x-x^0)^{\alpha} +
 \sum_{|\alpha| = 1} \frac{D^{\alpha}(f(x^0))}{\alpha!}(x-x^0)^{\alpha}+

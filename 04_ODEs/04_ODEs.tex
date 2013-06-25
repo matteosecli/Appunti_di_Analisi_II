@@ -17,7 +17,7 @@
 $$
 \lim_{h \rightarrow \infty} \mathrm{d}(x_h,\,x) = 0
 $$
-\item Usa successione $(x_n)_n \subset X$ si dice una \emph{successione di Cauchy} se $\forall \, \varepsilon > 0 \quad \exists \, \overline{h} = \overline{h}(\varepsilon) \in \mathbb{N}$ tale che
+\item Una successione $(x_n)_n \subset X$ si dice una \emph{successione di Cauchy} se $\forall \, \varepsilon > 0 \quad \exists \, \overline{h} = \overline{h}(\varepsilon) \in \mathbb{N}$ tale che
 $$
 \mathrm{d}(x_h,\,x_k) < \varepsilon \qquad \forall h,\,k > \overline{h}
 $$
@@ -126,7 +126,7 @@ $\displaystyle
 $
 \hfill \null \\
 \end{center}
-Siano $k,\,h \in \mathbb{N}, \quad k > h$. Vale
+Siano $k,\,h \in \mathbb{N}, \quad k < h$. Vale
 $$
 \mathrm{d}(x_k,\,x_h) \overset{\mathrm{(d3)}}{\leq} 
 \sum_{i=k}^{h-1} \mathrm{d}(x_{i+1},\,x_i) \overset{\mathrm{(2)}}{\leq}
@@ -135,10 +135,9 @@ $$
 $$
 \footnotetext{\`E una serie geometrica.}
 $$
-= \mathrm{d}(x_1,\,x_0) \dfrac{\alpha^{k+1}-\alpha^h}{1-\alpha} \overset{\footnotemark}{\leq}
+= \mathrm{d}(x_1,\,x_0) \dfrac{\alpha^{k}-\alpha^h}{1-\alpha} \leq
 \mathrm{d}(x_1,\,x_0) \dfrac{\alpha^{k}}{1-\alpha}
 $$
-\footnotetext{$\alpha < 1$, quindi $\alpha^{k+1} < \alpha^{k}$.}
 Dunque abbiamo provato che
 \begin{center}
 $\mathrm{(3)}$
@@ -154,7 +153,7 @@ Quindi, $\forall \, \varepsilon > 0 \quad \exists \, \overline{h} = \overline{h}
 $\mathrm{(4)}$
 \hfill
 $\displaystyle
-\mathrm{d}(x_k,\,x_h) < \varepsilon \qquad \forall \, k>h>\overline{h}
+\mathrm{d}(x_k,\,x_h) < \varepsilon \qquad \forall \, h>k>\overline{h}
 $
 \hfill \null \\
 \end{center}
@@ -162,7 +161,7 @@ o, in altre parole, $\forall \, \varepsilon > 0$ riusciamo sempre a trovare il p
 $$
 \mathrm{d}(x_{\overline{h}},\,x_h) \leq \frac{\mathrm{d}(x_1,\,x_0)}{1-\alpha} \alpha^{\overline{h}} < \varepsilon
 $$
-e di conseguenza prendendo qualsiasi $k>h>\overline{h}$, si verifica la $\mathrm{(4)}$.
+e di conseguenza prendendo qualsiasi $h>k>\overline{h}$, si verifica la $\mathrm{(4)}$.
 
 Avendo provato la $\mathrm{(1)}$, proviamo che $\overline{x}$ è un punto fisso di $T$ per completare la dimostrazione. Da $\mathrm{(1)}$ segue che anche la successione $(x_{h+1})_h$ è convergente a $\overline{x} \in X$, poiché è una successione estratta da $(x_h)_h$. Inoltre, poiché $T$ è lipschitziana con costante di Lipschitz $\alpha < 1$ e ogni funzione lipschitziana è continua, $T$ è continua. D'altra parte, dalla $\mathrm{(\star)}$ segue che (utilizzando la continuità di $T$):
 $$
@@ -235,7 +234,7 @@ $$
 $$
 Abbiamo quindi costruito una funzione $f: [a,\,b] \longrightarrow \mathbb{R}$ tale che
 $$
-f(t) \doteqdot \lim_{h \rightarrow \infty} f_h(t)) \qquad (\text{in } \mathbb{R})
+f(t) \doteqdot \lim_{h \rightarrow \infty} f_h(t) \qquad (\text{in } \mathbb{R})
 $$
 Per concludere, basta provare che
 \begin{center}
@@ -257,7 +256,7 @@ Fissiamo $h$ nella $\mathrm{(2)}$ e facciamo tendere $k \rightarrow \infty$, ott
 $\mathrm{(5)}$
 \hfill
 $\displaystyle
-\left| f_h(t)-f(t) \right| \leq \varepsilon \qquad \forall \, h > \overline{h}, \quad \forall \, t in [a,\,b]
+\left| f_h(t)-f(t) \right| \leq \varepsilon \qquad \forall \, h > \overline{h}, \quad \forall \, t \in [a,\,b]
 $
 \hfill \null \\
 \end{center}
@@ -505,7 +504,7 @@ Dividiamo la dimostrazione del teorema in tre passi.
 	$$
 	La proprietà $G_x \subseteq A$, dunque, è gratis. Anche la $\mathrm{(CI)}$ è banale, poiché sostituendo $t_0$ a $t$, otteniamo
 	$$
-	\underline{x(t)} = x_0 + \cancelto{_0}{\int_{t_0}^{t_0} f(s,\,x(s))\mathrm{d}s} = \underline{x_0}
+	\underline{x(t_0)} = x_0 + \cancelto{_0}{\int_{t_0}^{t_0} f(s,\,x(s))\mathrm{d}s} = \underline{x_0}
 	$$
 	Osserviamo che la funzione
 	$$
@@ -532,7 +531,7 @@ Dividiamo la dimostrazione del teorema in tre passi.
 	|f(t,\,u) - f(t,\,v)| \leq L|u-v| \qquad\qquad \forall
 	\begin{cases}
 	t \in [t_0-\delta_1,\,t_0+\delta_1]\\
-	x \in [x_0-\sigma_1,\,x_0+\sigma_1]\\
+	u,\,v \in [x_0-\sigma_1,\,x_0+\sigma_1]\\
 	\end{cases}
 	$$
 	\begin{proof}
@@ -545,7 +544,7 @@ Dividiamo la dimostrazione del teorema in tre passi.
 	|f(t,\,u) - f(t,\,v)| = \left(\dfrac{\partial f}{\partial x}(t,\,z)\right) \cdot (u-v) \leq
 	\underset{R}{\max}\left| \dfrac{\partial f}{\partial x} \right||u-v|
 	$$
-	$\forall \, t \in [t_0-\delta_1,\,t_0+\delta_1], \quad \forall \, x \in [x_0-\sigma_1,\,x_0+\sigma_1]$. Definendo
+	$\forall \, t \in [t_0-\delta_1,\,t_0+\delta_1], \quad \forall \, u,\,v \in [x_0-\sigma_1,\,x_0+\sigma_1]$. Definendo
 	$$
 	L \doteqdot \underset{R}{\max}\left| \dfrac{\partial f}{\partial x} \right|
 	$$
@@ -609,7 +608,7 @@ Dividiamo la dimostrazione del teorema in tre passi.
 	}
 	Come osservato prima, poiché $y \in X \subset C^0(I_0)$, vale che
 	$$
-	y \in X \Longleftrightarrow G_y \in R
+	y \in X \Longleftrightarrow G_y \subseteq R
 	$$
 	Quindi, possiamo scrivere
 	$$
@@ -636,7 +635,7 @@ Dividiamo la dimostrazione del teorema in tre passi.
 	\end{array}
 	$$
 	\footnotetext{
-	$|y(s)-z(s)| \leq \mathrm{d}_{\infty}(y,\,z)$
+	$|y(s)-z(s)| \leq \mathrm{d}_{\infty}(y,\,z) \doteqdot \underset{X}{\max}|y(s)-z(s)|$
 	}
 	Per ipotesi, abbiamo che $0 < L \cdot \delta_0 < 1$, quindi definiamo
 	$$
@@ -810,7 +809,7 @@ $$
 \mathrm{(PC^{\star})}
 \begin{cases}
 x' = f(t,\,x)\\
-x(\beta) = \beta\\
+x(\beta) = x_{\beta}\\
 \end{cases}
 $$
 Per il teorema di esistenza e unicità locale di $\mathrm{(PC)}$, esiste un $\delta_0 > 0$ e un'unica soluzione $v^{\star} : (\beta-\delta_0,\,\beta+\delta_0) \longrightarrow \mathbb{R}$ di $\mathrm{(PC^{\star})}$. Definiamo $v^{\star\star} : (\alpha,\,\beta+\delta_0) \longrightarrow \mathbb{R}$ tale che
@@ -945,7 +944,7 @@ $$
 dove $(t_0,\,x_1^0,\ldots,\,x_n^0) \in A$ fissato. Vale il seguente corollario.
 
 \begin{cor}[del teorema di esistenza e unicità locale per una ODE di ordine $n$ in forma normale]
-Siano $A \subset \mathbb{R}^{n+1}$ un aperto, $(t_0,\,X^0) \in A$ fissato, e $f \in C^1(A)$. Allora esiste un intervallo $(t_0-\delta_0,\,t_0+\delta_1)$ sul quale è definita un'unica soluzione di $\mathrm{(PCE)}$.
+Siano $A \subset \mathbb{R}^{n+1}$ un aperto, $(t_0,\,X^0) \in A$ fissato, e $f \in C^1(A)$. Allora esiste un intervallo $(t_0-\delta_0,\,t_0+\delta_0)$ sul quale è definita un'unica soluzione di $\mathrm{(PCE)}$.
 \end{cor}
 \begin{proof}
 Consideriamo $F : A \longrightarrow \mathbb{R}^n$ definita nel modo seguente:
@@ -1079,7 +1078,7 @@ y' = g(x,\,y)\\
 \text{dove } f,\,g : A \subseteq \mathbb{R}^2 \longrightarrow \mathbb{R} \, \text{ assegnate}
 $$
 
-Osserviamo che, nel caso $n = 2$, una soluzione di $\mathbb{(S)}$ è una curva $X : I \longrightarrow \mathbb{R}^2$, con $I \subseteq \mathbb{R}$ intervallo.
+Osserviamo che, nel caso $n = 2$, una soluzione di $\mathrm{(S)}$ è una curva $X : I \longrightarrow \mathbb{R}^2$, con $I \subseteq \mathbb{R}$ intervallo.
 
 Nel caso del pendolo, abbiamo
 $$
@@ -1110,7 +1109,7 @@ allora la curva $X : \mathbb{R} \longrightarrow \mathbb{R}^2$ definita
 $$
 X(t) \doteqdot (x_0,\,y_0), \qquad t \in \mathbb{R}
 $$
-è una soluzione di $\mathrm{(S)}$. Infatti, poiché $x_0$ e $y_0$ sono costanti, si ha banalmente $X'(t) = (x'(t),\,y'(t)) = (0,\,0)$, e grazie a $\mathrm{(\star)}$ anche $F(X) = 0$.
+è una soluzione di $\mathrm{(S)}$. Infatti, poiché $x_0$ e $y_0$ sono costanti, si ha banalmente $X'(t) = (x'(t),\,y'(t)) = (0,\,0)$, e grazie a $\mathrm{(\star)}$ anche $F(X) = \underline{0}$.
 \end{enumerate}
 \end{obs}
 
@@ -1248,7 +1247,7 @@ che appare più intuitiva utilizzando l'interpretazione cinematica. L'orbita del
 Sia $A \subseteq \mathbb{R}^2$ e sia $U \in C^1(A)$ un integrale primo di $\mathrm{(S)}$. Allora
 \begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\roman*)},start=1]
 \item un'orbita $\Gamma \subset A$ di $\mathrm{(S)}$ è contenuta in $\Gamma_c$ per un'opportuna costante $c \in \mathbb{R}$;
-\item l'insieme delle curve di livello di $U$ (cioè la famiglia $\Gamma_c = \lbrace (x,\,y) \in A : U(x,\,y) = x \rbrace$ al variare di $c \in \mathbb{R}$) è costituito da un'\emph{unione (disgiunta)} di orbite di $\mathrm{(S)}$.
+\item l'insieme delle curve di livello di $U$ (cioè la famiglia $\Gamma_c = \lbrace (x,\,y) \in A : U(x,\,y) = c \rbrace$ al variare di $c \in \mathbb{R}$) è costituito da un'\emph{unione (disgiunta)} di orbite di $\mathrm{(S)}$.
 \end{enumerate}
 \end{thm}
 \begin{proof}
@@ -1258,8 +1257,8 @@ Sia $A \subseteq \mathbb{R}^2$ e sia $U \in C^1(A)$ un integrale primo di $\math
 $$
 U(X(t)) = U(X(t_0)) = U(x_0,\,y_0) \doteqdot c, \qquad \forall \, t \in I
 $$
-Quindi $\Gamma_c \subseteq \Gamma$.
-\item Sia $c \in \mathbb{R}$ e $\Gamma_c \neq 0$ una curva di livello di $U$. Definiamo
+Quindi $\Gamma \subseteq \Gamma_c$.
+\item Sia $c \in \mathbb{R}$ e $\Gamma_c \neq \emptyset$ una curva di livello di $U$. Definiamo
 $$
 \vartheta_c = \lbrace \Gamma \subseteq \Gamma_c : \Gamma \text{ è un'orbita di } \mathrm{(S)} \rbrace
 $$
