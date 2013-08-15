@@ -99,7 +99,7 @@ cioè
 $$\forall \, \varepsilon > 0 \quad \exists \, \overline{h} = \overline{h}(\varepsilon) \in \mathbb{N} : \mathrm{d}(P_h,\, P_0) < \varepsilon, \qquad \forall \, h \overset{\tiny (\geq)}{>} \overline{h}$$
 \end{definition}
 
-Ma\dots operativamente? Ricordiamo innanzitutto che, presi $P_h(x_h,\, y_h)$ e $P_0(x_0,\, y_0)$, allora $\mathrm{d}(P_h,\, P_0) = \sqrt{(x_h-x_0)^2-(y_h-y_0)^2}$. Ci avvaliamo quindi del risultato del seguente teorema.
+Ma\dots operativamente? Ricordiamo innanzitutto che, presi $P_h(x_h,\, y_h)$ e $P_0(x_0,\, y_0)$, allora $\mathrm{d}(P_h,\, P_0) = \sqrt{(x_h-x_0)^2+(y_h-y_0)^2}$. Ci avvaliamo quindi del risultato del seguente teorema.
 
 \begin{thm}
 Siano $(P_h)_h \subset \mathbb{R}^2$ e $P_0 \in \mathbb{R}^2$.
@@ -1215,7 +1215,7 @@ Inoltre:
 \begin{center}
 $\mathrm{(1)}$
 \hfill
-$\displaystyle df(P_0)(v) = \Big( df_1(P_0)(v),\,df_2(P_0)(v),\ldots,df_m(P_0)(v) \Big), \qquad \forall \, v \in \mathbb{R}^n$
+$\displaystyle df(P_0)(v) = \Big( df_1(P_0)(v),\,df_2(P_0)(v),\ldots,df_m(P_0)(v) \Big)^{T}, \qquad \forall \, v \in \mathbb{R}^n$
 \hfill \null \\
 \end{center}
 \end{proposition}
@@ -1426,9 +1426,9 @@ Da $(4)$, segue che $\displaystyle \exists \lim_{y \rightarrow y_0} ||\rho^*(y)|
 ||\rho^*(g(x))||_k \cdot \frac{||g(x)-g(x_0)||_m}{||x-x_0||_n} \qquad \forall \, x \in A \setminus \lbrace x_0 \rbrace
 $
 \end{enumerate}
-e $$ \frac{||g(x)-g(x_0)||_m}{||x-x_0||_n} \underset{x \rightarrow x_0}{\longrightarrow} 0$$
+e $$ ||\rho^*(g(x))|| \underset{x \rightarrow x_0}{\longrightarrow} 0$$
 Per quanto riguarda il secondo fattore, usando la differenziabilità di $g$ in $x_0$ è facile osservare che (Ex. 3, Foglio 3) $\exists \, c > 0, \; R_0 > 0$ tale che:
-\begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\arabic*)},start=8]
+\begin{enumerate}[labelindent=\parindent,leftmargin=*,label=\textnormal{(\arabic*)},start=9]
 \item $\displaystyle \frac{||g(x)-g(x_0)||_m}{||x-x_0||_n} \leq c \qquad \forall \, x \in \mathrm{B}_n (x_0,\,R_0) \setminus \lbrace x_0 \rbrace$
 \end{enumerate}
 Da $(8)+(9)$, segue la $(6)$.
@@ -1505,7 +1505,7 @@ con
 \begin{center}
 $\mathrm{(RL_m)}$
 \hfill
-$\displaystyle R_m(x,\,x^0) = \sum_{\overset{\text{\scriptsize $\alpha \in \mathbb{N}^n$}}{|\alpha| = m+1}}^{m} \frac{D^{\alpha} f(\overline{x})}{\alpha!}(x-x^0)^{\alpha}$
+$\displaystyle R_m(x,\,x^0) = \sum_{\overset{\text{\scriptsize $\alpha \in \mathbb{N}^n$}}{|\alpha| = m+1}} \frac{D^{\alpha} f(\overline{x})}{\alpha!}(x-x^0)^{\alpha}$
 \hfill \null \\
 \end{center}
 dove $\overline{x}$ è un punto opportuno nel segmento $x^0x \doteqdot \lbrace tx + (1-t)x^0 : 0 \leq t \leq 1 \rbrace$. In particolare, vale che
@@ -1566,10 +1566,9 @@ Calcoliamo le derivate $F^{(k)}(t)$ in termini di $D^{\alpha}f$, tenendo conto c
 $\displaystyle F''(t) = \sum_{j=1}^2 \left ( (x_j-x_j^0) \nabla \left( \frac{\partial f}{\partial x_j} (x^0+t(x-x^0)) \right) \right) \bullet (x-x^0)=$\\
 $\displaystyle =
 \sum_{j=1}^2
-\left( 
-\sum_{i=1}^2 \frac{\partial^2 f}{\partial x_i \partial x_j} (x^0+t(x-x^0))(x_j-x_j^0)
-\right) 
-(x_i-x_i^0) = $\\
+(x_j-x_j^0) \left( 
+\sum_{i=1}^2 \frac{\partial^2 f}{\partial x_i \partial x_j} (x^0+t(x-x^0))(x_i-x_i^0)
+\right) = $\\
 $\displaystyle =
 \sum_{i=1,\,j=1}^2
 \frac{\partial^2 f}{\partial x_i \partial x_j} (x^0+t(x-x^0))(x_j-x_j^0)(x_i-x_i^0)$
@@ -1588,7 +1587,7 @@ $\mathrm{(3)}$
 $\displaystyle D^{\alpha} f (x^0 + t(x-x^0)) = \frac{\partial^k f}{\partial x_{i_1} \ldots \partial x_{i_k}} (x^0 + t(x-x^0))$
 \hfill \null \\
 \end{center}
-per una opportuna funzione $i : \lbrace 1,\,k \rbrace \longrightarrow \lbrace 1,\,2 \rbrace$ quando $i_j \overset{def}{=} i(j)$.
+per una opportuna funzione $i : \lbrace 1, \ldots ,k \rbrace \longrightarrow \lbrace 1,\,2 \rbrace$ quando $i_j \overset{def}{=} i(j)$.
 
 Tenendo presente il teorema di inversione dell'ordine delle derivate parziali, vale $\mathrm{(3)}$ se e solo se:
 \begin{center}
